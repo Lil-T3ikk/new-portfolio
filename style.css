@@ -462,6 +462,13 @@ body {
 .badge-label { font-family: var(--font-mono); font-size: .65rem; color: var(--text-muted); letter-spacing: 2px; }
 .badge-value { font-family: var(--font-head); font-size: 1.4rem; color: var(--violet-hi); letter-spacing: 2px; }
 
+.edu-badge-done {
+  border-color: rgba(0,245,255,0.25);
+  background: rgba(0,245,255,0.06);
+}
+.edu-badge-done .badge-value { color: var(--cyan); }
+.status-dot-done { background: var(--text-muted); box-shadow: none; animation: none; }
+
 /* ===== CONTACT ===== */
 .contact-content { max-width: 650px; margin: 0 auto; text-align: center; }
 .contact-lead { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2.5rem; }
