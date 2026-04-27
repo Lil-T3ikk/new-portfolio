@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Niccolò Piscioneri – Computer Science student & developer. Cyberpunk portfolio showcasing software projects, AI integrations, and technical skills." />
+  <meta name="keywords" content="Niccolò Piscioneri, developer, computer science, portfolio, C#, Python, AI, Azure" />
+  <meta name="author" content="Niccolò Piscioneri" />
+  <title>Niccolò Piscioneri | Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Scanline Overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <span class="logo-bracket">[</span>NP<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="nav-links-list">
+        <li><a href="#about" class="nav-link" id="nav-about">ABOUT</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">SKILLS</a></li>
+        <li><a href="#experience" class="nav-link" id="nav-experience">EXPERIENCE</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">PROJECTS</a></li>
+        <li><a href="#education" class="nav-link" id="nav-education">EDUCATION</a></li>
+        <li><a href="#contact" class="nav-link nav-cta" id="nav-contact">CONTACT</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero-section" aria-label="Hero section">
+    <div class="hero-glitch-bg" aria-hidden="true">
+      <div class="hex-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-status" id="hero-status-badge">
+        <span class="status-dot"></span>
+        <span class="status-text">SYSTEM ONLINE // YEAR 1 CS STUDENT</span>
+      </div>
+      <h1 class="hero-name" id="hero-name-heading">
+        <span class="glitch-text" data-text="NICCOLÒ">NICCOLÒ</span>
+        <span class="glitch-text hero-surname" data-text="PISCIONERI">PISCIONERI</span>
+      </h1>
+      <div class="hero-subtitle" id="hero-subtitle">
+        <span class="typed-text" id="typed-output"></span><span class="cursor">_</span>
+      </div>
+      <p class="hero-summary" id="hero-summary-text">
+        Versatile developer with hands-on experience in software creation,<br />
+        database management, and AI integration via APIs.
+      </p>
+      <div class="hero-cta-group" id="hero-cta-group">
+        <a href="#projects" class="btn btn-primary" id="btn-view-projects">
+          <span>VIEW PROJECTS</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:piscioneriniccolo@gmail.com" class="btn btn-secondary" id="btn-contact-me">
+          <span>CONTACT ME</span>
+        </a>
+      </div>
+      <div class="hero-stats" id="hero-stats-row">
+        <div class="stat-item" id="stat-languages">
+          <span class="stat-number">8+</span>
+          <span class="stat-label">LANGUAGES</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">//</div>
+        <div class="stat-item" id="stat-projects">
+          <span class="stat-number">2+</span>
+          <span class="stat-label">PROJECTS</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">//</div>
+        <div class="stat-item" id="stat-experience">
+          <span class="stat-number">2</span>
+          <span class="stat-label">INTERNSHIPS</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section" aria-label="About section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" aria-hidden="true">// 01</span>
+        <h2 class="section-title" id="about-heading">ABOUT ME</h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" id="about-text-block">
+          <p class="about-lead">
+            First-year Computer Science student at the <span class="highlight">University of Milano-Bicocca</span>,
+            with a passion for building software that bridges the gap between raw data and intelligent systems.
+          </p>
+          <p>
+            I have hands-on experience developing corporate solutions, integrating cloud and AI services,
+            and teaching programming concepts to young learners — proving that I can operate effectively
+            at both a technical and human level.
+          </p>
+          <div class="about-meta" id="about-meta-block">
+            <div class="meta-item" id="meta-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Milano-Bicocca, Italy</span>
+            </div>
+            <div class="meta-item" id="meta-status">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>Open to opportunities</span>
+            </div>
+            <div class="meta-item" id="meta-languages">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Italian (Native) · English (B2)</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-terminal" id="about-terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">profile.sh</span>
+          </div>
+          <div class="terminal-body" id="terminal-body-content">
+            <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat</span> profile.json</div>
+            <div class="terminal-line">{</div>
+            <div class="terminal-line t-indent"><span class="t-key">"name"</span>: <span class="t-val">"Niccolò Piscioneri"</span>,</div>
+            <div class="terminal-line t-indent"><span class="t-key">"role"</span>: <span class="t-val">"CS Student & Developer"</span>,</div>
+            <div class="terminal-line t-indent"><span class="t-key">"university"</span>: <span class="t-val">"Milano-Bicocca"</span>,</div>
+            <div class="terminal-line t-indent"><span class="t-key">"year"</span>: <span class="t-num">1</span>,</div>
+            <div class="terminal-line t-indent"><span class="t-key">"focus"</span>: [</div>
+            <div class="terminal-line t-indent t-indent"><span class="t-val">"Software Development"</span>,</div>
+            <div class="terminal-line t-indent t-indent"><span class="t-val">"AI Integration"</span>,</div>
+            <div class="terminal-line t-indent t-indent"><span class="t-val">"Database Management"</span></div>
+            <div class="terminal-line t-indent">],</div>
+            <div class="terminal-line t-indent"><span class="t-key">"github"</span>: <span class="t-val">"github.com/Lil-T3ikk"</span></div>
+            <div class="terminal-line">}</div>
+            <div class="terminal-line t-empty">&nbsp;</div>
+            <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-blink">▌</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section-alt" aria-label="Skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" aria-hidden="true">// 02</span>
+        <h2 class="section-title" id="skills-heading">TECHNICAL SKILLS</h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="skills-grid" id="skills-grid">
+
+        <div class="skill-category" id="skill-cat-languages">
+          <div class="skill-cat-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-tags" id="skill-tags-languages">
+            <span class="skill-tag" id="tag-csharp">C#</span>
+            <span class="skill-tag" id="tag-java">Java</span>
+            <span class="skill-tag" id="tag-python">Python</span>
+            <span class="skill-tag" id="tag-c">C</span>
+            <span class="skill-tag" id="tag-js">JavaScript</span>
+            <span class="skill-tag" id="tag-php">PHP</span>
+            <span class="skill-tag" id="tag-sql">SQL</span>
+            <span class="skill-tag" id="tag-mips">MIPS Assembly</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-cat-tools">
+          <div class="skill-cat-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <h3>Tools & APIs</h3>
+          </div>
+          <div class="skill-tags" id="skill-tags-tools">
+            <span class="skill-tag skill-tag-accent" id="tag-azure">Azure API</span>
+            <span class="skill-tag skill-tag-accent" id="tag-openai">OpenAI API</span>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-cat-soft">
+          <div class="skill-cat-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-tags" id="skill-tags-soft">
+            <span class="skill-tag skill-tag-soft" id="tag-comm">Technical Communication</span>
+            <span class="skill-tag skill-tag-soft" id="tag-teach">Teaching & Mentoring</span>
+            <span class="skill-tag skill-tag-soft" id="tag-group">Group Management</span>
+            <span class="skill-tag skill-tag-soft" id="tag-problem">Problem Solving</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section" aria-label="Experience section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" aria-hidden="true">// 03</span>
+        <h2 class="section-title" id="experience-heading">EXPERIENCE</h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="timeline" id="experience-timeline">
+
+        <!-- Softeam -->
+        <article class="timeline-item" id="exp-softeam">
+          <div class="timeline-marker" aria-hidden="true">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-header">
+              <div class="card-header-left">
+                <h3 class="job-title">Developer Intern</h3>
+                <span class="company-name">Softeam SpA <span class="company-location">— Lecco</span></span>
+              </div>
+              <div class="card-header-right">
+                <span class="job-duration">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  2 Weeks
+                </span>
+              </div>
+            </div>
+            <ul class="card-bullets" id="exp-softeam-bullets">
+              <li>Designed and developed a corporate solution for data acquisition and processing</li>
+              <li>Integrated cloud and AI services to optimize data entry workflows</li>
+            </ul>
+            <div class="card-tags" id="exp-softeam-tags">
+              <span class="mini-tag">C#</span>
+              <span class="mini-tag">Azure API</span>
+              <span class="mini-tag">OpenAI API</span>
+              <span class="mini-tag">Database</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Verderio School -->
+        <article class="timeline-item" id="exp-verderio">
+          <div class="timeline-marker" aria-hidden="true">
+            <div class="marker-dot"></div>
+            <div class="marker-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-header">
+              <div class="card-header-left">
+                <h3 class="job-title">Educational Intern</h3>
+                <span class="company-name">Primary School <span class="company-location">— Verderio</span></span>
+              </div>
+              <div class="card-header-right">
+                <span class="job-type">Educational</span>
+              </div>
+            </div>
+            <ul class="card-bullets" id="exp-verderio-bullets">
+              <li>Designed and conducted practical lessons for students (Grades 1–5)</li>
+              <li>Taught mechanics and programming through LEGO Education</li>
+              <li>Introduced logic and spatial directions using educational robots</li>
+              <li>Developed simplified technical communication and group management skills</li>
+            </ul>
+            <div class="card-tags" id="exp-verderio-tags">
+              <span class="mini-tag">LEGO Education</span>
+              <span class="mini-tag">Educational Robotics</span>
+              <span class="mini-tag">Teaching</span>
+              <span class="mini-tag">Logic & Programming</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section section-alt" aria-label="Projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" aria-hidden="true">// 04</span>
+        <h2 class="section-title" id="projects-heading">KEY PROJECTS</h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- OCR Scanner -->
+        <article class="project-card" id="project-ocr">
+          <div class="project-card-inner">
+            <div class="project-glow" aria-hidden="true"></div>
+            <div class="project-number" aria-hidden="true">01</div>
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+              </svg>
+            </div>
+            <h3 class="project-title" id="project-ocr-title">Business Card OCR Scanner</h3>
+            <p class="project-desc" id="project-ocr-desc">
+              Application developed for Softeam SpA capable of scanning business cards,
+              extracting text via AI-powered OCR, and automatically storing structured data into a database.
+            </p>
+            <div class="project-tech" id="project-ocr-tech">
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">Azure API</span>
+              <span class="tech-badge">OpenAI</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-line-accent" aria-hidden="true"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kahoot Clone -->
+        <article class="project-card" id="project-quiz">
+          <div class="project-card-inner">
+            <div class="project-glow" aria-hidden="true"></div>
+            <div class="project-number" aria-hidden="true">02</div>
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <h3 class="project-title" id="project-quiz-title">LAN-based Quiz Platform</h3>
+            <p class="project-desc" id="project-quiz-desc">
+              Multiplayer interactive application for local networks designed to manage and deliver real-time quizzes,
+              handling client synchronization and score collection — a Kahoot-style experience built from scratch.
+            </p>
+            <div class="project-tech" id="project-quiz-tech">
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">LAN Networking</span>
+              <span class="tech-badge">Real-time</span>
+            </div>
+            <div class="project-footer">
+              <div class="project-line-accent" aria-hidden="true"></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section" aria-label="Education section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" aria-hidden="true">// 05</span>
+        <h2 class="section-title" id="education-heading">EDUCATION</h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="education-card" id="education-card">
+        <div class="edu-glow" aria-hidden="true"></div>
+        <div class="edu-content">
+          <div class="edu-left">
+            <div class="edu-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <div class="edu-details">
+              <h3 class="edu-degree" id="edu-degree">Bachelor's Degree in Computer Science</h3>
+              <span class="edu-university" id="edu-university">University of Milano-Bicocca</span>
+              <span class="edu-status" id="edu-status">
+                <span class="status-dot-small"></span>
+                In progress — Year 1
+              </span>
+            </div>
+          </div>
+          <div class="edu-right">
+            <div class="edu-badge" id="edu-badge">
+              <span class="badge-label">CURRENTLY</span>
+              <span class="badge-value">YEAR 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-alt" aria-label="Contact section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" aria-hidden="true">// 06</span>
+        <h2 class="section-title" id="contact-heading">CONTACT</h2>
+        <div class="section-line" aria-hidden="true"></div>
+      </div>
+      <div class="contact-content" id="contact-content">
+        <p class="contact-lead" id="contact-lead-text">
+          Interested in working together? Let's connect.
+        </p>
+        <div class="contact-links" id="contact-links-group">
+          <a href="mailto:piscioneriniccolo@gmail.com" class="contact-link" id="contact-email">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">EMAIL</span>
+              <span class="contact-link-value">piscioneriniccolo@gmail.com</span>
+            </div>
+            <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://github.com/Lil-T3ikk" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-github">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">GITHUB</span>
+              <span class="contact-link-value">github.com/Lil-T3ikk</span>
+            </div>
+            <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">[NP]</span>
+        <span class="footer-copy">&copy; 2026 Niccolò Piscioneri</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-tag">BUILT WITH &lt;/&gt; AND COFFEE</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
